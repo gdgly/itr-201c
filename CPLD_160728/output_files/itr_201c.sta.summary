@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk_1mhz'
+Slack : -9.053
+TNS   : -1598.228
+
+Type  : Setup 'pwm_clk_div[2]'
+Slack : -7.258
+TNS   : -116.478
+
+Type  : Setup 'fpga_clk'
+Slack : -6.453
+TNS   : -233.230
+
+Type  : Setup 'my_counter:C1|lpm_counter:LPM_COUNTER_component|cntr_0nh:auto_generated|safe_q[9]'
+Slack : -1.210
+TNS   : -4.385
+
+Type  : Hold 'clk_1mhz'
+Slack : -2.264
+TNS   : -3.966
+
+Type  : Hold 'my_counter:C1|lpm_counter:LPM_COUNTER_component|cntr_0nh:auto_generated|safe_q[9]'
+Slack : 1.430
+TNS   : 0.000
+
+Type  : Hold 'fpga_clk'
+Slack : 1.659
+TNS   : 0.000
+
+Type  : Hold 'pwm_clk_div[2]'
+Slack : 1.672
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk_1mhz'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'fpga_clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'my_counter:C1|lpm_counter:LPM_COUNTER_component|cntr_0nh:auto_generated|safe_q[9]'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'pwm_clk_div[2]'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

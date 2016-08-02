@@ -1,0 +1,136 @@
+(ExpressProject "ITR-201C_FB"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\itr-201c_fb.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "0")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "FALSE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (DRC_Scope "0")
+    (DRC_Action "0")
+    (DRC_Create_Warnings "TRUE")
+    (DRC_View_Output "TRUE")
+    (DRC_Preserved_Waived "FALSE")
+    (DRC_Run_Electrical_Rules "TRUE")
+    (DRC_Run_Physical_Rules "TRUE")
+    (DRC_Report_File
+       "H:\360yunpan\My_design_SVN\DCA-600\ICE-624\V2.0_160710\ICE-624_EB_160710\SCH\ICE-624_EB_160710\ICE-624_EB_V20_160710.DRC")
+    (DRC_Check_Ports "TRUE")
+    (DRC_Check_Off-Page_Connectors "TRUE")
+    (DRC_Report_Ports_and_Off-page_Connectors "FALSE")
+    (DRC_SDT_Compatibility "FALSE")
+    (DRC_Report_Off-grid_Objects "FALSE")
+    (DRC_Check_Unconnected_Nets "TRUE")
+    (DRC_Check_for_Misleading_TAP "FALSE")
+    (DRC_Report_Netnames "FALSE")
+    (DRC_Check_Single_Node_Nets "TRUE")
+    (DRC_Run_Electrical_Custom_DRC "FALSE")
+    (DRC_Check_No_Driving_Source "TRUE")
+    (DRC_Check_Duplicate_NetNames "TRUE")
+    (DRC_Check_Floating_Pins "TRUE")
+    (DRC_Check_Physical_Power_Pins_Visibility "TRUE")
+    (DRC_Check_PCB_Footprint_Property "TRUE")
+    (DRC_Check_Normal_Convert_View_Sync "TRUE")
+    (DRC_Check_Incorrect_PinGroup_Assignment "TRUE")
+    (DRC_Check_High_Speed_Props_Syntax "TRUE")
+    (DRC_Check_Missing_Pin_Numbers "TRUE")
+    (DRC_Check_Device_With_No_Pins "TRUE")
+    (DRC_Check_Power_Ground_Short "FALSE")
+    (DRC_Identical_References "TRUE")
+    (DRC_Type_Mismatch "TRUE")
+    (DRC_Visible_Power_pins "TRUE")
+    (DRC_Report_Unused_Part_Packages "TRUE")
+    (DRC_Check_Name_Prop_For_HierBlocks "TRUE")
+    (DRC_Run_Physical_Custom_DRC "FALSE")
+    (IREFReportFile
+       "E:\360YUNPAN\RENSHUPENG\MY_DESIGN\ITR-201C_V20_160725\SCH_160725\ITR-201C_FB_V20_160725\ITR-201C_FB.csv")
+    (IREFViewOutput "0"))
+  (Folder "Outputs"
+    (File ".\itr-201c_fb.drc"
+      (Type "Report"))
+    (File ".\itr-201c_fb.csv"
+      (Type "Report"))
+    (File
+       "h:\360yunpan\my_design_svn\dca-600\ice-624\v2.0_160710\ice-624_eb_160710\sch\ice-624_eb_160710\ice-624_eb_v20_160710.drc"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\itr-201c_fb.dsn")
+      (Path "Design Resources" ".\itr-201c_fb.dsn" "ITR-201C_FB")
+      (Path "Outputs")
+      (Select "Design Resources" ".\itr-201c_fb.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 535"))
+      (Tab 0)))
+  (PartMRUSelector
+    (CON4
+      (FullPartName "CON4.Normal")
+      (LibraryName
+         "D:\CADENCE_WIN7\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (VDD3V3
+      (LibraryName "E:\SVN\HARDWARE_DESIGN\CADENCE_LIB\ORCAD_LIB\ARMLIB.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGE_IN-R
+      (LibraryName "E:\360YUNPAN\MY_DESIGN_SVN\ORCAD_LIB\SANWAY_166.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "E:\SVN\HARDWARE_DESIGN\CADENCE_LIB\ORCAD_LIB\ARMLIB.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGE_OUT-R
+      (LibraryName "E:\360YUNPAN\MY_DESIGN_SVN\ORCAD_LIB\SANWAY_166.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "D:\CADENCE_WIN7\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VCC_BAR
+      (LibraryName "D:\CADENCE_WIN7\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDD5V
+      (LibraryName "E:\KBD_DESIGN\CADENCE_LIB\ORCAD_LIB\ARMLIB.OLB")
+      (DeviceIndex "0"))
+    (HC-SR501
+      (FullPartName "HC-SR501.Normal")
+      (LibraryName "E:\360YUNPAN\MY_DESIGN_SVN\ORCAD_LIB\SANWAY_166.OLB")
+      (DeviceIndex "0"))
+    (CE
+      (FullPartName "CE.Normal")
+      (LibraryName "E:\SVN\HARDWARE_DESIGN\CADENCE_LIB\ORCAD_LIB\ARMLIB.OLB")
+      (DeviceIndex "0"))
+    (CAP
+      (FullPartName "CAP.Normal")
+      (LibraryName "E:\SVN\HARDWARE_DESIGN\CADENCE_LIB\ORCAD_LIB\ARMLIB.OLB")
+      (DeviceIndex "0"))
+    (SN75LVDS86A
+      (FullPartName "SN75LVDS86A.Normal")
+      (LibraryName "E:\SVN\HARDWARE_DESIGN\CADENCE_LIB\ORCAD_LIB\ARMLIB.OLB")
+      (DeviceIndex "0"))
+    (LMT035KDH03-NNA
+      (FullPartName "LMT035KDH03-NNA.Normal")
+      (LibraryName "E:\360YUNPAN\MY_DESIGN_SVN\ORCAD_LIB\SANWAY_166.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "walei163"))

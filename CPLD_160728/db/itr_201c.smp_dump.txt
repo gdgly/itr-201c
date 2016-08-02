@@ -1,0 +1,18 @@
+
+State Machine - |itr_201c|wsd:WSD2|curr_state
+Name curr_state.WSD_ERR curr_state.WSD_DATA curr_state.WSD_END curr_state.WSD_ST2 curr_state.WSD_ST1 curr_state.WSD_IDLE 
+curr_state.WSD_IDLE 0 0 0 0 0 0 
+curr_state.WSD_ST1 0 0 0 0 1 1 
+curr_state.WSD_ST2 0 0 0 1 0 1 
+curr_state.WSD_END 0 0 1 0 0 1 
+curr_state.WSD_DATA 0 1 0 0 0 1 
+curr_state.WSD_ERR 1 0 0 0 0 1 
+
+State Machine - |itr_201c|wsd:WSD1|curr_state
+Name curr_state.WSD_ERR curr_state.WSD_DATA curr_state.WSD_END curr_state.WSD_ST2 curr_state.WSD_ST1 curr_state.WSD_IDLE 
+curr_state.WSD_IDLE 0 0 0 0 0 0 
+curr_state.WSD_ST1 0 0 0 0 1 1 
+curr_state.WSD_ST2 0 0 0 1 0 1 
+curr_state.WSD_END 0 0 1 0 0 1 
+curr_state.WSD_DATA 0 1 0 0 0 1 
+curr_state.WSD_ERR 1 0 0 0 0 1 
