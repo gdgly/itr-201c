@@ -124,3 +124,4 @@ set_location_assignment PIN_95 -to wsd_sample[2]
 set_location_assignment PIN_94 -to wsd[2]
 set_location_assignment PIN_87 -to buzzer_out
 set_global_assignment -name QIP_FILE my_counter.qip
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
