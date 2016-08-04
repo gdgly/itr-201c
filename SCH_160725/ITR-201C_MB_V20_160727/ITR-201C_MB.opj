@@ -72,19 +72,16 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "E:\360yunpan\renshupeng\my_design\itr-201c_v20_160725\sch_160725\ITR-201C_MB_V20_160727\itr-201c_mb.dsn")
-      (Path "Design Resources"
-         "E:\360yunpan\renshupeng\my_design\itr-201c_v20_160725\sch_160725\ITR-201C_MB_V20_160727\itr-201c_mb.dsn"
-         "ITR-201C_MB")
+      (Path "Design Resources" ".\itr-201c_mb.dsn")
+      (Path "Design Resources" ".\itr-201c_mb.dsn" "ITR-201C_MB")
       (Path "Outputs")
-      (Select "Design Resources"
-         "E:\360yunpan\renshupeng\my_design\itr-201c_v20_160725\sch_160725\ITR-201C_MB_V20_160727\itr-201c_mb.dsn"))
+      (Select "Design Resources" ".\itr-201c_mb.dsn" "ITR-201C_MB"
+         "14_CONNECTOR_TO_FB"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 535"))
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 535"))
       (Tab 0)))
   (PartMRUSelector
     (GND
@@ -110,4 +107,5 @@
     (JUMPER3
       (FullPartName "JUMPER3.Normal")
       (LibraryName "E:\SVN\HARDWARE_DESIGN\CADENCE_LIB\ORCAD_LIB\ARMLIB.OLB")
-      (DeviceIndex "0"))))
+      (DeviceIndex "0")))
+  (MPSSessionName "walei163"))
