@@ -32,7 +32,7 @@
     (DRC_Run_Electrical_Rules "TRUE")
     (DRC_Run_Physical_Rules "TRUE")
     (DRC_Report_File
-       "H:\360yunpan\My_design_SVN\DCA-600\ICE-624\V2.0_160710\ICE-624_EB_160710\SCH\ICE-624_EB_160710\ICE-624_EB_V20_160710.DRC")
+       "H:\360yunpan\RenShuPeng\My_design\ITR-201C_V20_160725\SCH_160725\ITR-201C_FB_V20_160725\ITR-201C_FB.DRC")
     (DRC_Check_Ports "TRUE")
     (DRC_Check_Off-Page_Connectors "TRUE")
     (DRC_Report_Ports_and_Off-page_Connectors "FALSE")
@@ -67,9 +67,6 @@
     (File ".\itr-201c_fb.drc"
       (Type "Report"))
     (File ".\itr-201c_fb.csv"
-      (Type "Report"))
-    (File
-       "h:\360yunpan\my_design_svn\dca-600\ice-624\v2.0_160710\ice-624_eb_160710\sch\ice-624_eb_160710\ice-624_eb_v20_160710.drc"
       (Type "Report")))
   (Folder "Referenced Projects")
   (GlobalState
@@ -86,6 +83,9 @@
         (Placement "44 2 3 -1 -1 -8 -31 0 200 0 535"))
       (Tab 0)))
   (PartMRUSelector
+    (GND
+      (LibraryName "D:\CADENCE_WIN7\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (CON4
       (FullPartName "CON4.Normal")
       (LibraryName
@@ -103,9 +103,6 @@
       (DeviceIndex "0"))
     (OFFPAGE_OUT-R
       (LibraryName "E:\360YUNPAN\MY_DESIGN_SVN\ORCAD_LIB\SANWAY_166.OLB")
-      (DeviceIndex "0"))
-    (GND
-      (LibraryName "D:\CADENCE_WIN7\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (VCC_BAR
       (LibraryName "D:\CADENCE_WIN7\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
