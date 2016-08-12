@@ -73,13 +73,13 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "H:\360yunpan\RenShuPeng\My_design\ITR-201C_V20_160725\SCH_160725\ITR-201C_FB_V20_160725\itr-201c_fb.dsn")
+         "E:\360yunpan\RenShuPeng\My_design\ITR-201C_V20_160725\SCH_160725\ITR-201C_FB_V20_160725\itr-201c_fb.dsn")
       (Path "Design Resources"
-         "H:\360yunpan\RenShuPeng\My_design\ITR-201C_V20_160725\SCH_160725\ITR-201C_FB_V20_160725\itr-201c_fb.dsn"
+         "E:\360yunpan\RenShuPeng\My_design\ITR-201C_V20_160725\SCH_160725\ITR-201C_FB_V20_160725\itr-201c_fb.dsn"
          "ITR-201C_FB")
       (Path "Outputs")
       (Select "Design Resources"
-         "H:\360yunpan\RenShuPeng\My_design\ITR-201C_V20_160725\SCH_160725\ITR-201C_FB_V20_160725\itr-201c_fb.dsn"))
+         "E:\360yunpan\RenShuPeng\My_design\ITR-201C_V20_160725\SCH_160725\ITR-201C_FB_V20_160725\itr-201c_fb.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -134,4 +134,4 @@
       (FullPartName "LMT035KDH03-NNA.Normal")
       (LibraryName "E:\360YUNPAN\MY_DESIGN_SVN\ORCAD_LIB\SANWAY_166.OLB")
       (DeviceIndex "0")))
-  (MPSSessionName "walei163"))
+  (MPSSessionName "Winface"))
