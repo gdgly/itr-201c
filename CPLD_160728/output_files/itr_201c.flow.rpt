@@ -1,5 +1,5 @@
 Flow report for itr_201c
-Tue Aug 02 17:11:45 2016
+Thu Sep 08 15:18:25 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------+--------------------------------------------------+
-; Flow Status               ; Successful - Tue Aug 02 17:11:40 2016            ;
+; Flow Status               ; Successful - Thu Sep 08 15:18:21 2016            ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name             ; itr_201c                                         ;
 ; Top-level Entity Name     ; itr_201c                                         ;
@@ -59,27 +59,27 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/02/2016 17:11:20 ;
+; Start date & time ; 09/08/2016 15:18:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; itr_201c            ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                   ;
-+---------------------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+---------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 106258772509554.147012908009492 ; --            ; --          ; --         ;
-; IP_TOOL_NAME                          ; LPM_COUNTER                     ; --            ; --          ; --         ;
-; IP_TOOL_VERSION                       ; 13.0                            ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --            ; --          ; --         ;
-; MISC_FILE                             ; my_counter_bb.v                 ; --            ; --          ; --         ;
-; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                            ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION         ; No Heat Sink With Still Air     ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY              ; output_files                    ; --            ; --          ; --         ;
-+---------------------------------------+---------------------------------+---------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                  ;
++---------------------------------------+--------------------------------+---------------+-------------+------------+
+; Assignment Name                       ; Value                          ; Default Value ; Entity Name ; Section Id ;
++---------------------------------------+--------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID                 ; 10995770589195.147331909000176 ; --            ; --          ; --         ;
+; IP_TOOL_NAME                          ; LPM_COUNTER                    ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                       ; 13.0                           ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                             ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                              ; --            ; --          ; --         ;
+; MISC_FILE                             ; my_counter_bb.v                ; --            ; --          ; --         ;
+; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                           ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION         ; No Heat Sink With Still Air    ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY              ; output_files                   ; --            ; --          ; --         ;
++---------------------------------------+--------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -87,11 +87,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 462 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:10     ; 1.6                     ; 1221 MB             ; 00:00:09                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 416 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 451 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:17                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 462 MB              ; 00:00:04                           ;
+; Fitter                    ; 00:00:05     ; 1.2                     ; 851 MB              ; 00:00:06                           ;
+; Assembler                 ; 00:00:00     ; 1.0                     ; 416 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 436 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -100,10 +100,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; wanglei          ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; wanglei          ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; wanglei          ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; wanglei          ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; PC_WIN           ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; PC_WIN           ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; PC_WIN           ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; PC_WIN           ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

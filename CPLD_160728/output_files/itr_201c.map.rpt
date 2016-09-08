@@ -1,5 +1,5 @@
 Analysis & Synthesis report for itr_201c
-Tue Aug 02 17:11:26 2016
+Thu Sep 08 15:18:13 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -51,7 +51,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                   ;
 +-----------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Aug 02 17:11:26 2016            ;
+; Analysis & Synthesis Status ; Successful - Thu Sep 08 15:18:13 2016            ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name               ; itr_201c                                         ;
 ; Top-level Entity Name       ; itr_201c                                         ;
@@ -141,15 +141,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -158,9 +158,9 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-; wsd.v                            ; yes             ; User Verilog HDL File        ; F:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/wsd.v           ;         ;
-; itr_201c.v                       ; yes             ; User Verilog HDL File        ; F:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/itr_201c.v      ;         ;
-; my_counter.v                     ; yes             ; User Wizard-Generated File   ; F:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/my_counter.v    ;         ;
+; wsd.v                            ; yes             ; User Verilog HDL File        ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/wsd.v           ;         ;
+; itr_201c.v                       ; yes             ; User Verilog HDL File        ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/itr_201c.v      ;         ;
+; my_counter.v                     ; yes             ; User Wizard-Generated File   ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/my_counter.v    ;         ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf            ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc           ;         ;
 ; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc             ;         ;
@@ -171,7 +171,7 @@ applicable agreement for further details.
 ; dffeea.inc                       ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                 ;         ;
 ; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc    ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc             ;         ;
-; db/cntr_0nh.tdf                  ; yes             ; Auto-Generated Megafunction  ; F:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/db/cntr_0nh.tdf ;         ;
+; db/cntr_0nh.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/db/cntr_0nh.tdf ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
@@ -230,7 +230,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance         ; IP Include File                                                                ;
 +--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------+
-; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |itr_201c|my_counter:C1 ; F:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/my_counter.v ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |itr_201c|my_counter:C1 ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/my_counter.v ;
 +--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------+
 
 
@@ -421,9 +421,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Aug 02 17:11:19 2016
+    Info: Processing started: Thu Sep 08 15:18:09 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off itr_201c -c itr_201c
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file wsd.v
     Info (12023): Found entity 1: wsd
 Info (12021): Found 1 design units, including 1 entities, in source file itr_201c.v
@@ -458,8 +458,8 @@ Info (21057): Implemented 707 device resources after synthesis - the final resou
     Info (21061): Implemented 639 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 462 megabytes
-    Info: Processing ended: Tue Aug 02 17:11:26 2016
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Thu Sep 08 15:18:13 2016
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

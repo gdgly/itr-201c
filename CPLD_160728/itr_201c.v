@@ -109,30 +109,31 @@ assign wdg_out = wdg_en ? wdg_pwm : wdg_cnt[23];
 // Buzzer logic: 0x2800_0001
 // Buzz_en: [0] - Open/close buzzer. 0 - close. 1 - open.
 //------------------------------------------------------------------------------------------------
+`define BUZZER_SUM	25
 wire buzz_cs;
 reg buzz_en;
-reg [24:0] buzz_cnt;
+reg[`BUZZER_SUM - 1:0] buzz_cnt; 
 reg buzz_rst;
 
 assign buzz_cs = !ngcs[MISC_BANK] & (sa[7:0] == 8'b1);
 
 always @(posedge fpga_clk or negedge sys_rst_n)
 begin
-	if(!sys_rst_n)             buzz_en <= 1'b0;
+	if(!sys_rst_n)            buzz_en <= 1'b0;
 	else if(!nwe && buzz_cs)  buzz_en <= sd[0];
 end
 
 always @(posedge fpga_clk or negedge sys_rst_n) 
 begin
 	if(!sys_rst_n) 
-		buzz_cnt[24:20] <= 5'b11100;
-	else if(!buzz_cnt[24] && buzz_en)
-		buzz_cnt[24:20] <= 5'b11100;
-	else if(buzz_cnt[24])
-		buzz_cnt <= buzz_cnt - 25'b1;
+		buzz_cnt[`BUZZER_SUM - 1:20] <= 5'b11100;
+	else if(!buzz_cnt[`BUZZER_SUM - 1] && buzz_en)
+		buzz_cnt[`BUZZER_SUM - 1:20] <= 5'b11100;
+	else if(buzz_cnt[`BUZZER_SUM - 1])
+		buzz_cnt <= buzz_cnt - `BUZZER_SUM'b1; 
 end
 
-assign buzzer_out = buzz_cnt[16] || (!buzz_cnt[24]); 
+assign buzzer_out = buzz_cnt[14] || (!buzz_cnt[`BUZZER_SUM - 1]); 
 
 //------------------------------------------------------------------------------------------------
 // IO led out logic: 0x2800_0002
