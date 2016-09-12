@@ -77,10 +77,12 @@ assign cpld_lcd_nrst = sys_rst_n;
 // wdg_reg: [0] - Open/close watchdog. 0 - close. 1 - open.
 //          [1] - Feed watchdog. 
 //------------------------------------------------------------------------------------------------
+`define WDG_SUM	19
 wire wdg_cs;
-reg [23:0] wdg_cnt;
+reg [`WDG_SUM - 1:0] wdg_cnt;
 reg wdg_en;
 reg wdg_pwm;
+wire wdg_clk = clk_1mhz;
 
 assign wdg_cs = !ngcs[MISC_BANK] & (sa[7:0] == 8'b0);
 
@@ -96,13 +98,13 @@ begin
 	end
 end
 
-always @(posedge fpga_clk or negedge sys_rst_n)
+always @(posedge wdg_clk or negedge sys_rst_n)
 begin
-	if(!sys_rst_n)   wdg_cnt <= 24'b0;
-	else            wdg_cnt <= wdg_cnt + 24'b1;
+	if(!sys_rst_n)  wdg_cnt <= `WDG_SUM'b0;
+	else            wdg_cnt <= wdg_cnt + `WDG_SUM'b1;
 end
 
-assign wdg_out = wdg_en ? wdg_pwm : wdg_cnt[23];
+assign wdg_out = wdg_en ? wdg_pwm : wdg_cnt[`WDG_SUM - 1];
 //assign wdg_out = wdg_en ? 1'bz : wdg_cnt[23];
 
 //------------------------------------------------------------------------------------------------
@@ -151,7 +153,7 @@ assign io_led_out_cs = !ngcs[MISC_BANK]  & (sa[7:0] == 8'b10);
 
 always @(posedge fpga_clk or negedge sys_rst_n)
 begin
-	if(!sys_rst_n)               		io_led_out_reg <= 4'b1;
+	if(!sys_rst_n)               	 io_led_out_reg <= 4'b1;
 	else if(!nwe && io_led_out_cs)   io_led_out_reg <= sd[3:0];
 end
 
@@ -263,31 +265,60 @@ assign io_led_out[3] = !(io_led_out_reg[3] | relay_ctrl[2] | relay_ctrl[3]);
 //	KEY_BOARD logic, 8 bit data bus. 4 x 4 Matrix KEY_BOARD
 //	KEY_BOARD address offset: 0x9
 //---------------------------------------------------------------------------------------------------------------------------------
-`define KEY_CLK_WIDTH	10
-wire [`KEY_CLK_WIDTH - 1:0] key_cnt;
-wire key_clk;
+//`define KEY_CLK_WIDTH	13
+//wire [`KEY_CLK_WIDTH - 1:0] key_cnt;
+//wire key_clk;
 wire key_cs;
-wire key_shift_en;
+//wire key_shift_en;
 wire [7:0] key_code;
-reg [3:0] key_shift;
+//reg [3:0] key_shift;
 wire irq_key;
 
 assign key_cs       = !ngcs[MISC_BANK] && (sa[`SA_ADDR_WIDTH - 1:0] == `SA_ADDR_WIDTH'b1001);
-assign key_shift_en = &cpld_key_in;
-assign irq_key      = &cpld_key_in;
 
+//assign key_shift_en = (cpld_key_in == 4'b1111) ? 1'b1 : 1'b0;
+//
+//my_counter C1(.aclr(!sys_rst_n), .clock(clk_1mhz), .q(key_cnt));		//1Mhz / 1024 = 1Khz
+//assign key_clk = key_cnt[`KEY_CLK_WIDTH - 1];
+//
+//always @(posedge key_clk or negedge sys_rst_n)
+//begin
+//	if(!sys_rst_n)         key_shift <= 4'b1110;
+//	else if(key_shift_en)  key_shift <= {key_shift[0], key_shift[3:1]};
+//end
+//
+//assign cpld_key_out = key_shift;
+//assign key_code     = key_shift_en ? 8'hff : {cpld_key_in[3:0], key_shift};
+//
+//reg [7:0] key_curr_state;
+//reg [7:0] key_next_state;
+//
+//always @(posedge key_clk or negedge sys_rst_n)
+//begin
+//	if(!sys_rst_n) key_curr_state <= 8'b0;
+//	else           key_curr_state <= key_code;
+//end
+//
+//
+//always @(posedge key_clk or negedge sys_rst_n)
+//begin
+//	if(!sys_rst_n) 
+//		key_next_state <= 8'b0;
+//	else if(key_curr_state != key_next_state) 		
+//		key_next_state <= key_curr_state;
+//end
+//
+//assign irq_key      = !((cpld_key_in != 4'b1111) && (key_curr_state != key_next_state));
 
-my_counter C1(.aclr(!sys_rst_n), .clock(clk_1mhz), .q(key_cnt));		//1Mhz / 1024 = 1Khz
-assign key_clk = key_cnt[`KEY_CLK_WIDTH - 1];
-
-always @(posedge key_clk or negedge sys_rst_n)
-begin
-	if(!sys_rst_n)         key_shift <= 4'b1110;
-	else if(key_shift_en)  key_shift <= {key_shift[0], key_shift[3:1]};
-end
-
-assign cpld_key_out = key_shift;
-assign key_code     = key_shift_en ? 8'hff : {cpld_key_in[3:0], cpld_key_out};
+key_matrix_4x4 KEY_MATRIX1
+(
+	.clk_1mhz(clk_1mhz), 
+	.reset_n(sys_rst_n), 
+	.key_in(cpld_key_in), 
+	.key_out(cpld_key_out), 
+	.irq_key(irq_key), 
+	.key_code_out(key_code)
+);
 
 //---------------------------------------------------------------------------------------------------------------------------------
 //	LVDS control logic, 
@@ -300,7 +331,7 @@ assign lvds_ctrl_cs = !ngcs[MISC_BANK] && (sa[`SA_ADDR_WIDTH - 1:0] == `SA_ADDR_
 
 always @(posedge fpga_clk or negedge sys_rst_n)
 begin
-	if(!sys_rst_n)                lvds_ctrl <= 2'b01;
+	if(!sys_rst_n)                lvds_ctrl <= 2'b11;
 	else if(!nwe && lvds_ctrl_cs) lvds_ctrl <= sd[1:0];
 end
 
@@ -384,7 +415,7 @@ wsd WSD2
 	.state(wsd2_state)
 );
 
-assign cpld_led = {&wsd_sample, wdg_cnt[23]};
+assign cpld_led = {&wsd_sample, wdg_cnt[`WDG_SUM - 1]};
 assign irq_cpld = {1'b1, irq_key, wsd2_data_ready, wsd_data_ready};
 
 //------------------------------------------------------------------------------------------------

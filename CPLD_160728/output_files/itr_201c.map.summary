@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Thu Sep 08 15:18:13 2016
+Analysis & Synthesis Status : Successful - Mon Sep 12 19:16:25 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : itr_201c
 Top-level Entity Name : itr_201c
 Family : MAX II
-Total logic elements : 639
+Total logic elements : 652
 Total pins : 68
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

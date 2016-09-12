@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="itr_201c">
-		<CBX_INST_ENTRY INSTANCE_NAME="|itr_201c|my_counter:C1|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_0nh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|itr_201c|key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_3nh.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

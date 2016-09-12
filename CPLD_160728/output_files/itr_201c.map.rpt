@@ -1,5 +1,5 @@
 Analysis & Synthesis report for itr_201c
-Thu Sep 08 15:18:13 2016
+Mon Sep 12 19:16:25 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -21,10 +21,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Parameter Settings for User Entity Instance: Top-level Entity: |itr_201c
- 16. Parameter Settings for User Entity Instance: my_counter:C1|lpm_counter:LPM_COUNTER_component
+ 16. Parameter Settings for User Entity Instance: key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component
  17. Parameter Settings for User Entity Instance: wsd:WSD1
  18. Parameter Settings for User Entity Instance: wsd:WSD2
- 19. Port Connectivity Checks: "my_counter:C1"
+ 19. Port Connectivity Checks: "key_matrix_4x4:KEY_MATRIX1|my_counter:C1"
  20. Analysis & Synthesis Messages
 
 
@@ -51,12 +51,12 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                   ;
 +-----------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Sep 08 15:18:13 2016            ;
+; Analysis & Synthesis Status ; Successful - Mon Sep 12 19:16:25 2016            ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name               ; itr_201c                                         ;
 ; Top-level Entity Name       ; itr_201c                                         ;
 ; Family                      ; MAX II                                           ;
-; Total logic elements        ; 639                                              ;
+; Total logic elements        ; 652                                              ;
 ; Total pins                  ; 68                                               ;
 ; Total virtual pins          ; 0                                                ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                    ;
@@ -141,38 +141,39 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-; wsd.v                            ; yes             ; User Verilog HDL File        ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/wsd.v           ;         ;
-; itr_201c.v                       ; yes             ; User Verilog HDL File        ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/itr_201c.v      ;         ;
-; my_counter.v                     ; yes             ; User Wizard-Generated File   ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/my_counter.v    ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf            ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc             ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc            ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc               ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc            ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc            ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                 ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc    ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc             ;         ;
-; db/cntr_0nh.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/db/cntr_0nh.tdf ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; wsd.v                            ; yes             ; User Verilog HDL File        ; H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/wsd.v            ;         ;
+; itr_201c.v                       ; yes             ; User Verilog HDL File        ; H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/itr_201c.v       ;         ;
+; my_counter.v                     ; yes             ; User Wizard-Generated File   ; H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/my_counter.v     ;         ;
+; key_matrix_4x4.v                 ; yes             ; User Verilog HDL File        ; H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/key_matrix_4x4.v ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf             ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc            ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc             ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc                ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc             ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc             ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                  ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc     ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/altera_win7/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc              ;         ;
+; db/cntr_3nh.tdf                  ; yes             ; Auto-Generated Megafunction  ; H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/db/cntr_3nh.tdf  ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -180,58 +181,59 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Total logic elements                        ; 639       ;
-;     -- Combinational with no register       ; 275       ;
-;     -- Register only                        ; 137       ;
-;     -- Combinational with a register        ; 227       ;
+; Total logic elements                        ; 652       ;
+;     -- Combinational with no register       ; 276       ;
+;     -- Register only                        ; 148       ;
+;     -- Combinational with a register        ; 228       ;
 ;                                             ;           ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 197       ;
-;     -- 3 input functions                    ; 42        ;
-;     -- 2 input functions                    ; 241       ;
+;     -- 4 input functions                    ; 198       ;
+;     -- 3 input functions                    ; 44        ;
+;     -- 2 input functions                    ; 240       ;
 ;     -- 1 input functions                    ; 22        ;
 ;     -- 0 input functions                    ; 0         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 521       ;
-;     -- arithmetic mode                      ; 118       ;
+;     -- normal mode                          ; 536       ;
+;     -- arithmetic mode                      ; 116       ;
 ;     -- qfbk mode                            ; 0         ;
 ;     -- register cascade mode                ; 0         ;
 ;     -- synchronous clear/load mode          ; 74        ;
-;     -- asynchronous clear/load mode         ; 344       ;
+;     -- asynchronous clear/load mode         ; 356       ;
 ;                                             ;           ;
-; Total registers                             ; 364       ;
-; Total logic cells in carry chains           ; 130       ;
+; Total registers                             ; 376       ;
+; Total logic cells in carry chains           ; 128       ;
 ; I/O pins                                    ; 68        ;
 ; Maximum fan-out node                        ; sys_rst_n ;
-; Maximum fan-out                             ; 348       ;
-; Total fan-out                               ; 2660      ;
-; Average fan-out                             ; 3.76      ;
+; Maximum fan-out                             ; 360       ;
+; Total fan-out                               ; 2711      ;
+; Average fan-out                             ; 3.77      ;
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
-+-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                               ; Library Name ;
-+-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------+--------------+
-; |itr_201c                                 ; 639 (320)   ; 364          ; 0          ; 68   ; 0            ; 275 (210)    ; 137 (51)          ; 227 (59)         ; 130 (64)        ; 0 (0)      ; |itr_201c                                                                         ; work         ;
-;    |my_counter:C1|                        ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |itr_201c|my_counter:C1                                                           ; work         ;
-;       |lpm_counter:LPM_COUNTER_component| ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |itr_201c|my_counter:C1|lpm_counter:LPM_COUNTER_component                         ; work         ;
-;          |cntr_0nh:auto_generated|        ; 10 (10)     ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |itr_201c|my_counter:C1|lpm_counter:LPM_COUNTER_component|cntr_0nh:auto_generated ; work         ;
-;    |wsd:WSD1|                             ; 155 (155)   ; 122          ; 0          ; 0    ; 0            ; 33 (33)      ; 43 (43)           ; 79 (79)          ; 28 (28)         ; 0 (0)      ; |itr_201c|wsd:WSD1                                                                ; work         ;
-;    |wsd:WSD2|                             ; 154 (154)   ; 122          ; 0          ; 0    ; 0            ; 32 (32)      ; 43 (43)           ; 79 (79)          ; 28 (28)         ; 0 (0)      ; |itr_201c|wsd:WSD2                                                                ; work         ;
-+-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
++----------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                          ; Library Name ;
++----------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+--------------+
+; |itr_201c                                    ; 652 (303)   ; 376          ; 0          ; 68   ; 0            ; 276 (204)    ; 148 (48)          ; 228 (51)         ; 128 (59)        ; 0 (0)      ; |itr_201c                                                                                                    ; work         ;
+;    |key_matrix_4x4:KEY_MATRIX1|              ; 40 (27)     ; 33           ; 0          ; 0    ; 0            ; 7 (7)        ; 14 (14)           ; 19 (6)           ; 13 (0)          ; 0 (0)      ; |itr_201c|key_matrix_4x4:KEY_MATRIX1                                                                         ; work         ;
+;       |my_counter:C1|                        ; 13 (0)      ; 13           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 13 (0)           ; 13 (0)          ; 0 (0)      ; |itr_201c|key_matrix_4x4:KEY_MATRIX1|my_counter:C1                                                           ; work         ;
+;          |lpm_counter:LPM_COUNTER_component| ; 13 (0)      ; 13           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 13 (0)           ; 13 (0)          ; 0 (0)      ; |itr_201c|key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component                         ; work         ;
+;             |cntr_3nh:auto_generated|        ; 13 (13)     ; 13           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 13 (13)          ; 13 (13)         ; 0 (0)      ; |itr_201c|key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component|cntr_3nh:auto_generated ; work         ;
+;    |wsd:WSD1|                                ; 155 (155)   ; 122          ; 0          ; 0    ; 0            ; 33 (33)      ; 43 (43)           ; 79 (79)          ; 28 (28)         ; 0 (0)      ; |itr_201c|wsd:WSD1                                                                                           ; work         ;
+;    |wsd:WSD2|                                ; 154 (154)   ; 122          ; 0          ; 0    ; 0            ; 32 (32)      ; 43 (43)           ; 79 (79)          ; 28 (28)         ; 0 (0)      ; |itr_201c|wsd:WSD2                                                                                           ; work         ;
++----------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                    ;
-+--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance         ; IP Include File                                                                ;
-+--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------+
-; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |itr_201c|my_counter:C1 ; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/my_counter.v ;
-+--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                               ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------+--------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                    ; IP Include File                                                                ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------+--------------------------------------------------------------------------------+
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |itr_201c|key_matrix_4x4:KEY_MATRIX1|my_counter:C1 ; H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/my_counter.v ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------+--------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -264,19 +266,21 @@ Encoding Type:  One-Hot
 +---------------------+--------------------+---------------------+--------------------+--------------------+--------------------+---------------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; wsd:WSD2|curr_state~4                 ; Lost fanout        ;
-; wsd:WSD2|curr_state~5                 ; Lost fanout        ;
-; wsd:WSD2|curr_state~6                 ; Lost fanout        ;
-; wsd:WSD1|curr_state~4                 ; Lost fanout        ;
-; wsd:WSD1|curr_state~5                 ; Lost fanout        ;
-; wsd:WSD1|curr_state~6                 ; Lost fanout        ;
-; Total Number of Removed Registers = 6 ;                    ;
-+---------------------------------------+--------------------+
++----------------------------------------------------------------+
+; Registers Removed During Synthesis                             ;
++---------------------------------------+------------------------+
+; Register name                         ; Reason for Removal     ;
++---------------------------------------+------------------------+
+; pwm_clk_div[0]                        ; Merged with wdg_cnt[0] ;
+; pwm_clk_div[1]                        ; Merged with wdg_cnt[1] ;
+; wsd:WSD2|curr_state~4                 ; Lost fanout            ;
+; wsd:WSD2|curr_state~5                 ; Lost fanout            ;
+; wsd:WSD2|curr_state~6                 ; Lost fanout            ;
+; wsd:WSD1|curr_state~4                 ; Lost fanout            ;
+; wsd:WSD1|curr_state~5                 ; Lost fanout            ;
+; wsd:WSD1|curr_state~6                 ; Lost fanout            ;
+; Total Number of Removed Registers = 8 ;                        ;
++---------------------------------------+------------------------+
 
 
 +------------------------------------------------------+
@@ -284,12 +288,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 364   ;
+; Total registers                              ; 376   ;
 ; Number of registers using Synchronous Clear  ; 56    ;
 ; Number of registers using Synchronous Load   ; 18    ;
-; Number of registers using Asynchronous Clear ; 344   ;
+; Number of registers using Asynchronous Clear ; 356   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 262   ;
+; Number of registers using Clock Enable       ; 270   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -304,9 +308,10 @@ Encoding Type:  One-Hot
 ; buzz_cnt[24]                            ; 9       ;
 ; io_led_out_reg[0]                       ; 2       ;
 ; led_pwm                                 ; 3       ;
-; key_shift[1]                            ; 3       ;
-; key_shift[2]                            ; 3       ;
-; key_shift[3]                            ; 3       ;
+; key_matrix_4x4:KEY_MATRIX1|key_shift[1] ; 3       ;
+; key_matrix_4x4:KEY_MATRIX1|key_shift[2] ; 3       ;
+; key_matrix_4x4:KEY_MATRIX1|key_shift[3] ; 3       ;
+; lvds_ctrl[1]                            ; 2       ;
 ; lvds_ctrl[0]                            ; 2       ;
 ; led_pwm_cnt[7]                          ; 2       ;
 ; led_pwm_cnt[15]                         ; 2       ;
@@ -314,7 +319,7 @@ Encoding Type:  One-Hot
 ; led_load_cnt[15]                        ; 2       ;
 ; buzz_cnt[23]                            ; 1       ;
 ; buzz_cnt[22]                            ; 1       ;
-; Total number of inverted registers = 15 ;         ;
+; Total number of inverted registers = 16 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -323,15 +328,15 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |itr_201c|wsd:WSD2|wsd_counter[2]   ;
-; 3:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |itr_201c|wsd:WSD2|data_out_reg[14] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |itr_201c|wsd:WSD2|wsd_counter[5]   ;
+; 3:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |itr_201c|wsd:WSD2|data_out_reg[34] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |itr_201c|wsd:WSD1|wsd_counter[7]   ;
-; 3:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |itr_201c|wsd:WSD1|data_out_reg[12] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |itr_201c|buzz_cnt[21]              ;
-; 4:1                ; 40 bits   ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |itr_201c|wsd:WSD2|data_shift[33]   ;
-; 4:1                ; 40 bits   ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |itr_201c|wsd:WSD1|data_shift[29]   ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |itr_201c|wsd:WSD2|data_counter[0]  ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |itr_201c|wsd:WSD1|data_counter[1]  ;
+; 3:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |itr_201c|wsd:WSD1|data_out_reg[11] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |itr_201c|buzz_cnt[20]              ;
+; 4:1                ; 40 bits   ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |itr_201c|wsd:WSD2|data_shift[4]    ;
+; 4:1                ; 40 bits   ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |itr_201c|wsd:WSD1|data_shift[12]   ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |itr_201c|wsd:WSD2|data_counter[5]  ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |itr_201c|wsd:WSD1|data_counter[4]  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |itr_201c|buzz_cnt[22]              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
@@ -349,30 +354,30 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: my_counter:C1|lpm_counter:LPM_COUNTER_component ;
-+------------------------+-------------+-------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                  ;
-+------------------------+-------------+-------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                          ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                        ;
-; LPM_WIDTH              ; 10          ; Signed Integer                                        ;
-; LPM_DIRECTION          ; UP          ; Untyped                                               ;
-; LPM_MODULUS            ; 0           ; Untyped                                               ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                               ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                               ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                               ;
-; DEVICE_FAMILY          ; MAX II      ; Untyped                                               ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                               ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                    ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                    ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                               ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                               ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                               ;
-; CBXI_PARAMETER         ; cntr_0nh    ; Untyped                                               ;
-+------------------------+-------------+-------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                             ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                   ;
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                   ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                          ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                          ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                          ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                          ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                          ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                               ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                               ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                          ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                          ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; cntr_3nh    ; Untyped                                                                          ;
++------------------------+-------------+----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -406,13 +411,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "my_counter:C1"                                                                         ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; q[8..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_matrix_4x4:KEY_MATRIX1|my_counter:C1"                                               ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; q[11..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -421,27 +426,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Sep 08 15:18:09 2016
+    Info: Processing started: Mon Sep 12 19:16:20 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off itr_201c -c itr_201c
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file wsd.v
     Info (12023): Found entity 1: wsd
 Info (12021): Found 1 design units, including 1 entities, in source file itr_201c.v
     Info (12023): Found entity 1: itr_201c
 Info (12021): Found 1 design units, including 1 entities, in source file my_counter.v
     Info (12023): Found entity 1: my_counter
+Info (12021): Found 1 design units, including 1 entities, in source file key_matrix_4x4.v
+    Info (12023): Found entity 1: key_matrix_4x4
 Info (12127): Elaborating entity "itr_201c" for the top level hierarchy
-Info (12128): Elaborating entity "my_counter" for hierarchy "my_counter:C1"
-Info (12128): Elaborating entity "lpm_counter" for hierarchy "my_counter:C1|lpm_counter:LPM_COUNTER_component"
-Info (12130): Elaborated megafunction instantiation "my_counter:C1|lpm_counter:LPM_COUNTER_component"
-Info (12133): Instantiated megafunction "my_counter:C1|lpm_counter:LPM_COUNTER_component" with the following parameter:
+Info (12128): Elaborating entity "key_matrix_4x4" for hierarchy "key_matrix_4x4:KEY_MATRIX1"
+Info (12128): Elaborating entity "my_counter" for hierarchy "key_matrix_4x4:KEY_MATRIX1|my_counter:C1"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
     Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
-    Info (12134): Parameter "lpm_width" = "10"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0nh.tdf
-    Info (12023): Found entity 1: cntr_0nh
-Info (12128): Elaborating entity "cntr_0nh" for hierarchy "my_counter:C1|lpm_counter:LPM_COUNTER_component|cntr_0nh:auto_generated"
+    Info (12134): Parameter "lpm_width" = "13"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_3nh.tdf
+    Info (12023): Found entity 1: cntr_3nh
+Info (12128): Elaborating entity "cntr_3nh" for hierarchy "key_matrix_4x4:KEY_MATRIX1|my_counter:C1|lpm_counter:LPM_COUNTER_component|cntr_3nh:auto_generated"
 Info (12128): Elaborating entity "wsd" for hierarchy "wsd:WSD1"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "io_rdy" is stuck at VCC
@@ -451,15 +459,15 @@ Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "gpmc_cs_n[1]"
     Warning (15610): No output dependent on input pin "gpmc_cs_n[2]"
-Info (21057): Implemented 707 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 720 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 29 input pins
     Info (21059): Implemented 31 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 639 logic cells
+    Info (21061): Implemented 652 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 462 megabytes
-    Info: Processing ended: Thu Sep 08 15:18:13 2016
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 463 megabytes
+    Info: Processing ended: Mon Sep 12 19:16:25 2016
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

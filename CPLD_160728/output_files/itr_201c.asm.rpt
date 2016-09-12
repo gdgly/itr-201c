@@ -1,5 +1,5 @@
 Assembler report for itr_201c
-Thu Sep 08 15:18:21 2016
+Mon Sep 12 19:16:35 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/output_files/itr_201c.pof
+  5. Assembler Device Options: H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/output_files/itr_201c.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Sep 08 15:18:21 2016 ;
+; Assembler Status      ; Successful - Mon Sep 12 19:16:35 2016 ;
 ; Revision Name         ; itr_201c                              ;
 ; Top-level Entity Name ; itr_201c                              ;
 ; Family                ; MAX II                                ;
@@ -80,18 +80,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------+
 ; File Name                                                                                   ;
 +---------------------------------------------------------------------------------------------+
-; E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/output_files/itr_201c.pof ;
+; H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/output_files/itr_201c.pof ;
 +---------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/output_files/itr_201c.pof ;
+; Assembler Device Options: H:/360yunpan/RenShuPeng/My_design/ITR-201C_V20_160725/CPLD_160728/output_files/itr_201c.pof ;
 +----------------+------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                              ;
 +----------------+------------------------------------------------------------------------------------------------------+
 ; Device         ; EPM570T144C5                                                                                         ;
-; JTAG usercode  ; 0x002E040D                                                                                           ;
-; Checksum       ; 0x002E044B                                                                                           ;
+; JTAG usercode  ; 0x002DBB66                                                                                           ;
+; Checksum       ; 0x002DBB98                                                                                           ;
 +----------------+------------------------------------------------------------------------------------------------------+
 
 
@@ -101,14 +101,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Sep 08 15:18:21 2016
+    Info: Processing started: Mon Sep 12 19:16:34 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off itr_201c -c itr_201c
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 416 megabytes
-    Info: Processing ended: Thu Sep 08 15:18:21 2016
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Mon Sep 12 19:16:35 2016
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
